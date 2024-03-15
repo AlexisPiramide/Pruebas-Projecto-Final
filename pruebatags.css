@@ -1,24 +1,17 @@
 .container-tags {
-    margin: 2em 6em;
-    padding: 3em;
     padding-left: 1em;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-size: 1rem;
     color: var(--color_);
     border: 1px solid var(--border);
     border-radius: 0.35em;
-    background-color: var(--blocks);
-    background-image: url(https://css-tricks.com/wp-content/themes/CSS-Tricks-17/images/featured-comment.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 70% 50%;
     box-shadow: 0 10px 60px var(--shadow);
 }
 
 .container-tags .tag {
+    
     white-space: nowrap;
     margin: 0.5em;
     text-transform: uppercase;
@@ -26,10 +19,16 @@
     border-radius: 2em;
     transition: transform 0.2s, background 0.2s, -webkit-background-clip 0.2s;
     transition-timing-function: cubic-bezier(0.45, -0.85, 0.55, -0.45);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom:5px;
 }
 
 .container-tags .tag input[type="checkbox"] {
-    margin-right: 0.5em;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+
 }
 
 .container-tags .tag:hover {

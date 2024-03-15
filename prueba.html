@@ -11,17 +11,19 @@
 </head>
 
 <body>
-    <input type="text" placeholder="Buscar ofertas..." />
-    <label class="opciones-etiquetas">
-        <h4 id="exclusiva">Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva"></h4>
-        <h4 id="inclusiva">Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva"></h4>
-    </label>
-    <div class="container-tags">
-        <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">HTML<input type="checkbox"></button>
-        <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">CSS<input type="checkbox"></button>
-        <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">FRONT<input type="checkbox"></button>
-        <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">BACK<input type="checkbox"></button>
-        <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">FULL<input type="checkbox"></button>
+    <div class="secion-etiquetas">
+        <input class="search-bar"type="text" placeholder="Buscar ofertas..." />
+        <div class="container-tags">
+            <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">HTML<input type="checkbox"></button>
+            <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">CSS<input type="checkbox"></button>
+            <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">FRONT<input type="checkbox"></button>
+            <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">BACK<input type="checkbox"></button>
+            <button key="pepe" class="tag" type="checkbox" onclick="toggleButtonClass(this)">FULL<input type="checkbox"></button>
+        </div>
+        <label class="opciones-etiquetas">
+            <h4 id="exclusiva">Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva"></h4>
+            <h4 id="inclusiva">Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva"></h4>
+        </label>
     </div>
 </body>
 
