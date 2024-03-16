@@ -1,5 +1,6 @@
-
 import "../style/Etiquetas.css"
+import "../style/OpcionesEtiquetas.css"
+
 export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtiquetasSeleccionadas, setOpcionesBusqueda}) {
 
     // Esta funcion filtra las etiquetas seleccionadas y las agrega o quita a las etiquetas selecionadas 
