@@ -1,5 +1,4 @@
 import "../style/Etiquetas.css"
-import "../style/OpcionesEtiquetas.css"
 
 export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtiquetasSeleccionadas, setOpcionesBusqueda}) {
 
@@ -39,12 +38,12 @@ export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtique
             <input class="search-bar" type="text" placeholder="Buscar ofertas..." />
             <div class="container-tags">
                 {etiquetas.map((etiqueta) => (
-                    <button key={etiqueta.id} class="tag" type="checkbox" onclick={(e) => (selecionarEtiqueta(e))}>{etiqueta.nombre}<input type="checkbox"/></button>
+                    <button key={etiqueta.id} class="tag" type="checkbox" onClick={(e) => (selecionarEtiqueta(e))}>{etiqueta.nombre}<input type="checkbox"/></button>
                 ))}
             </div>
             <div class="opciones-etiquetas">
-                <button id="exclusiva" onclick={(e)=> seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva"/></button>
-                <button id="inclusiva"  onclick={(e)=> seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva"/></button>
+                <button id="exclusiva" onClick={(e)=> seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva"/></button>
+                <button id="inclusiva"  onClick={(e)=> seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva"/></button>
             </div>
         </div>
     )
