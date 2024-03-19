@@ -7,12 +7,40 @@
     gap:0.5em;
 }
 
-.search-bar {
+.secion-etiquetas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secion-etiquetas > div{
     width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.secion-etiquetas > div > button{
     padding: 0.5em;
     font-size: 1rem;
     border: 1px solid red;
     border-radius: 0.35em;
+    margin: 2em;
+}
+
+.search-bar::placeholder {
+    color: #999;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 0.5em;
+    font-size: 1rem;
+    border: 1px solid red;
+    border-radius: 0.35em;
+    margin: 2em;
 }
 
 
@@ -55,64 +83,48 @@
     background: linear-gradient(to right, #ff8a00, #da1b60);
 }
 
-.opciones-etiquetas{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
+.opciones-etiquetas {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: start;
     gap: 2em;
 }
+
+.opciones-etiquetas > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+}
+
 .opciones-etiquetas > h4 {
-    position: relative; 
+    position: relative;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
 }
 
-.opciones-etiquetas > h4:hover::after {
-    content: "La busqueda exclusiva unicamente muestra las ofertas que contienen todas las etiquetas ";
-    position: absolute;
-
-    transform: translateX(-50%);
-    background-color: #f9f9f9; 
-    color: #333; 
-    padding: 0.5em; 
-    border-radius: 4px; 
-    z-index: 1; 
-    background-color: white;
-}
-
-.opciones-etiquetas > h4#exclusiva:hover::after {
+.opciones-etiquetas > h4#exclusiva {
     left: 48%;
     bottom: -7em;
     height: 5.8em;
     width: 11em;
-    content: "La busqueda exclusiva unicamente muestra las ofertas que contienen todas las etiquetas selecionadas";
 }
-.opciones-etiquetas > h4#inclusiva:hover::after {
+
+.opciones-etiquetas > h4#inclusiva {
     left: 49%;
     bottom: -7em;
     height: 5.8em;
     width: 11em;
-    content: "La busqueda inclusiva muestra todas las ofertas que contengan alguna de las etiquetas selecionadas";
 }
 
-.etiqueta-container{
-   display: flex;
-   gap: 20px
-}
-
-.secion-etiquetas{
+.etiqueta-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
-.search-bar::placeholder {
-    color: #999;
-}
