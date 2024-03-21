@@ -1,9 +1,11 @@
 import "../style/Etiquetas.css"
 import { useState } from "react";
+import ContenedorEtiquetas from "./ContenedorEtiquetas";
+import OpcionesEtiquetas from "./OpcionesEtiquetas";
 
 export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtiquetasSeleccionadas, setOpcionesBusqueda }) {
 
-    const [opcionTexto, setOpcionTexto] = useState('Seleciona una opcion de busqueda');
+    const [escodidas,setEscondidas] = useState(false);
 
     // Esta funcion filtra las etiquetas seleccionadas y las agrega o quita a las etiquetas selecionadas 
     const selecionarEtiqueta = (e) => {
@@ -28,38 +30,14 @@ export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtique
         button.classList.toggle('checked');
     }
 
-    // Esta funcion selecciona las opciones de busqueda
-    const seleccionOpciones = (e) => {
-        e.preventDefault();
-        const opcion = e.target.id;
-        let texto = '';
-        (opcion == 'exclusiva') ? texto = 'Solo se mostraran ofertas con estas etiquetas' : texto = 'Se mostrarán todas las ofertas con alguna de estas etiquetas';
-        setOpcionTexto(texto)
-        setOpcionesBusqueda(opcion);
-    }
-
-    const esconderEtiquetas = () => {
-        
-    }
-
     return (
         <div className="secion-etiquetas">
             <div>
                 <input className="search-bar" type="text" placeholder="Buscar ofertas..." />
-                <button onClick={esconderEtiquetas}>Esconder Etiquetas</button>
+                <button onClick={()=>setEscondidas(!escodidas)}>Esconder Etiquetas</button>
             </div>
-            <div className="container-tags">
-                {etiquetas.map((etiqueta) => (
-                    <button key={etiqueta.id} className="tag" type="checkbox" onClick={(e) => (selecionarEtiqueta(e))}>{etiqueta.nombre}<input type="checkbox" /></button>
-                ))}
-            </div>
-            <div className="opciones-etiquetas">
-                <p id='texto-opcion'>{opcionTexto}</p>
-                <div>
-                    <button id="exclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva" /></button>
-                    <button id="inclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva" /></button>
-                </div>
-            </div>
+            {escodidas?<ContenedorEtiquetas etiquetas={etiquetas} selecionarEtiqueta={selecionarEtiqueta}/>:''}
+            {escodidas?<OpcionesEtiquetas/>:''}
         </div>
     )
 } 
