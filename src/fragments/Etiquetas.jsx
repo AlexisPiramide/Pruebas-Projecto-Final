@@ -34,7 +34,7 @@ export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtique
         <div className="secion-etiquetas">
             <div>
                 <input className="search-bar" type="text" placeholder="Buscar ofertas..." />
-                <button onClick={()=>setEscondidas(!escodidas)}>Esconder Etiquetas</button>
+                <button onClick={()=>setEscondidas(!escodidas)}>{escodidas?'Esconder Etiquetas':'Mostrar Etiquetas'}</button>
             </div>
             {escodidas?<ContenedorEtiquetas etiquetas={etiquetas} selecionarEtiqueta={selecionarEtiqueta}/>:''}
             {escodidas?<OpcionesEtiquetas/>:''}

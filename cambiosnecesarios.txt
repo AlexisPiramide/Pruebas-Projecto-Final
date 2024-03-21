@@ -1,0 +1,1 @@
+Hacer que en vez de eliminar las etiquetas y las opciones etiquetas solo se oculten asi no eliminando las opciones selecionadas
