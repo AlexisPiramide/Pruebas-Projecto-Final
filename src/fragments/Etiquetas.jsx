@@ -15,10 +15,12 @@ export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtique
         <div className="secion-etiquetas">
             <div>
                 <input className="search-bar" type="text" placeholder="Buscar ofertas..." />
-                <button onClick={()=>setEscondidas(!escodidas)}>{escodidas?'Esconder Etiquetas':'Mostrar Etiquetas'}</button>
+                <button className="boton-esconder" onClick={()=>setEscondidas(!escodidas)}>{escodidas?'Esconder Etiquetas':'Mostrar Etiquetas'}</button>
             </div>
-            {escodidas?<ContenedorEtiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas}/>:''}
-            {escodidas?<OpcionesEtiquetas setOpcionesBusqueda={setOpcionesBusqueda}/>:''}
+            <div className={escodidas ? 'hidden' : 'visible'}>
+                <ContenedorEtiquetas etiquetas={etiquetas}  etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas}/>
+                <OpcionesEtiquetas setOpcionesBusqueda={setOpcionesBusqueda}/>
+            </div>
         </div>
     )
 } 

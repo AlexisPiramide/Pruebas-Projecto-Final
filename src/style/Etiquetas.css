@@ -14,12 +14,13 @@
     align-items: center;
 }
 
-.secion-etiquetas > div > button{
-    padding: 0.5em;
-    font-size: 1rem;
-    border: 1px solid red;
-    border-radius: 0.35em;
-    margin: 2em;
+
+.secion-etiquetas > div:nth-child(2){
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-bar::placeholder {
@@ -35,3 +36,21 @@
     margin: 2em;
 }
 
+.boton-esconder{
+    width: 10em;
+    padding: 0.5em;
+    font-size: 1rem;
+    border: 1px solid red;
+    border-radius: 0.35em;
+    margin: 2em;
+
+}
+
+.visible {
+    visibility:visible;
+}
+.hidden {
+    visibility:hidden;
+    height: 0;
+    width: 0;
+}
