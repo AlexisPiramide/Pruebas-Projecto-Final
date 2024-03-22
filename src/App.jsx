@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   const ejemplos = [
-    {id: "1", nombre: "FRONT"},
+    {id: 1, nombre: "FRONT"},
     {id: 2, nombre: "BACK"},
     {id: 3, nombre: "FULLSTACK"},
     {id: 4, nombre: "UI/UX Designer"},

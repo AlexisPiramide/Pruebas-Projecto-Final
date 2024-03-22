@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "../style/OpcionesEtiquetas.css";
 
-export default function OpcionesEtiquetas() {
+export default function OpcionesEtiquetas({ setOpcionesBusqueda }) {
 
     const [opcionTexto, setOpcionTexto] = useState('Seleciona una opcion de busqueda');
 
@@ -16,11 +17,11 @@ export default function OpcionesEtiquetas() {
 
     return (
         <div className="opciones-etiquetas">
-        <p id='texto-opcion'>{opcionTexto}</p>
-        <div>
-            <button id="exclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva" /></button>
-            <button id="inclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva" /></button>
-        </div>
+            <p id='texto-opcion'>{opcionTexto}</p>
+            <div>
+                <button id="exclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva" /></button>
+                <button id="inclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva" /></button>
+            </div>
         </div>
     )
 }

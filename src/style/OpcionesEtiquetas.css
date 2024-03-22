@@ -1,0 +1,40 @@
+
+.opciones-etiquetas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: start;
+    gap: 2em;
+}
+
+.opciones-etiquetas > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.opciones-etiquetas > h4 {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.opciones-etiquetas > h4#exclusiva {
+    left: 48%;
+    bottom: -7em;
+    height: 5.8em;
+    width: 11em;
+}
+
+.opciones-etiquetas > h4#inclusiva {
+    left: 49%;
+    bottom: -7em;
+    height: 5.8em;
+    width: 11em;
+}
