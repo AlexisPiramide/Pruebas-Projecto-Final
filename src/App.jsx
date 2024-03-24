@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Etiquetas from './fragments/Etiquetas'
+import Ofertas from './fragments/Ofertas'
 import './App.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
   return (
     <>
       <Etiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas} setOpcionesBusqueda={setOpcionesBusqueda} />
+      <Ofertas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />
     </>
   )
 }
