@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../style/Ofertas.css'
 import Etiquetas from './Etiquetas'
 
-export default function Ofertas({ etiquetasSeleccionadas, opcionesBusqueda,etiquetas }) {
+export default function Ofertas({ etiquetasSeleccionadas, opcionesBusqueda, etiquetas }) {
 
 
     const [ofertas, setOfertas] = useState([])
@@ -14,27 +14,30 @@ export default function Ofertas({ etiquetasSeleccionadas, opcionesBusqueda,etiqu
     }, [])
     */
 
+    //Ver oferta tendria que ser otra pagina con solo la informacion de esa oferta  
     return (
         <div className="seccion-ofertas">
             {ofertas.map((oferta) => {
-                return (
-                    <div className="border">
-                        <div key={index} className="oferta">
-                            <h3>{oferta.title}</h3>
-                            <p>{oferta.company}</p>
-                            <p>{oferta.location}</p>
-                            <p>{oferta.type}</p>
-                            <a href={oferta.url} target="_blank" rel="noreferrer">Ver oferta</a>
-                            <ul className='secion-etiquetas-oferta'>
-                                {oferta.tags.map((tag) => {
-                                    return (
-                                        <li>{tag.nombre}</li>
-                                    )
-                                })}
-                            </ul>
+                if (oferta.estado == 'Activa') {
+                    return (
+                        <div className="border">
+                            <div key={oferta.id} className="oferta">
+                                <h3>{oferta.titulo}</h3>
+                                <p>{oferta.descripcion}</p>
+                                <p>{oferta.fecha_publicacion}</p>
+                                <a href={oferta.Usuario} target="_blank" rel="noreferrer">Usuario</a>
+                                <a>Ver oferta</a> 
+                                <ul className='secion-etiquetas-oferta'>
+                                    {oferta.tags.map((tag) => {
+                                        return (
+                                            <li>{tag.nombre}</li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                )
+                    );
+                }
             })}
         </div>
     )

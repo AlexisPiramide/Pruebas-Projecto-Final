@@ -39,3 +39,5 @@ CREATE TABLE Contactos (
     pais VARCHAR(255),
     codigo_postal VARCHAR(255)
 );
+
+-----------------------------------------------
