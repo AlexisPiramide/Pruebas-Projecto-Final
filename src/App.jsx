@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Etiquetas from './fragments/Etiquetas'
 import Ofertas from './fragments/Ofertas'
 import './App.css'
+import {getEtiquetas} from './services/etiquetas'
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
     {id: 13, nombre: "Machine Learning Engineer"}
   ]
   
-
+  useEffect(() => {
+    //setEtiquetas(getEtiquetas());
+  }, [])
 
   const [etiquetas, setEtiquetas] = useState(ejemplos);
   const [etiquetasSeleccionadas, setEtiquetasSeleccionadas] = useState([])
@@ -31,7 +34,7 @@ function App() {
   return (
     <>
       <Etiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas} setOpcionesBusqueda={setOpcionesBusqueda} />
-      <Ofertas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />
+      <Ofertas etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />
     </>
   )
 }
