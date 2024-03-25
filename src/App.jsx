@@ -29,11 +29,11 @@ function App() {
   const [etiquetas, setEtiquetas] = useState(ejemplos);
   const [etiquetasSeleccionadas, setEtiquetasSeleccionadas] = useState([])
   const [opcionesBusqueda, setOpcionesBusqueda] = useState()
-
+  const [sesion, setSesion] = useState(false);
 
   return (
     <>
-      <Navegacion/>
+      <Navegacion sesion={sesion}/>
       <main>
         <Etiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas} setOpcionesBusqueda={setOpcionesBusqueda} />
         <Ofertas etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />

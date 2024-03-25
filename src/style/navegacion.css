@@ -53,6 +53,10 @@ aside{
     border-radius: 40px;
 }
 
+.usuario-sesion > .enlace{
+    margin-bottom: 10px;
+}
+
 .enlace > img {
     width: 20px;
     height: 20px;
@@ -78,5 +82,4 @@ aside > div:last-child > .enlace{
 
 main{
     width: 100%;
-
 }

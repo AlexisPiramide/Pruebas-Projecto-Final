@@ -19,8 +19,8 @@ export default function OpcionesEtiquetas({ setOpcionesBusqueda }) {
         <div className="opciones-etiquetas">
             <p id='texto-opcion'>{opcionTexto}</p>
             <div>
-                <button id="exclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Exclusiva*<input type="radio" name="busqueda" value="exclusiva" /></button>
-                <button id="inclusiva" onClick={(e) => seleccionOpciones(e)}>Busqueda Inclusiva*<input type="radio" name="busqueda" value="inclusiva" /></button>
+                <button id="exclusiva" className="opcion" onClick={(e) => seleccionOpciones(e)}>Busqueda Exclusiva<input type="radio" name="busqueda" value="exclusiva" /></button>
+                <button id="inclusiva" className="opcion" onClick={(e) => seleccionOpciones(e)}>Busqueda Inclusiva<input type="radio" name="busqueda" value="inclusiva" /></button>
             </div>
         </div>
     )
