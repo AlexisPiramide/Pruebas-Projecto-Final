@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Etiquetas from './fragments/Etiquetas'
 import Ofertas from './fragments/Ofertas'
-import './App.css'
+import Navegacion from './fragments/navegacion'
 import {getEtiquetas} from './services/etiquetas'
 
 function App() {
@@ -33,8 +33,11 @@ function App() {
 
   return (
     <>
-      <Etiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas} setOpcionesBusqueda={setOpcionesBusqueda} />
-      <Ofertas etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />
+      <Navegacion/>
+      <main>
+        <Etiquetas etiquetas={etiquetas} etiquetasSeleccionadas={etiquetasSeleccionadas} setEtiquetasSeleccionadas={setEtiquetasSeleccionadas} setOpcionesBusqueda={setOpcionesBusqueda} />
+        <Ofertas etiquetasSeleccionadas={etiquetasSeleccionadas} opcionesBusqueda={opcionesBusqueda} />
+      </main>
     </>
   )
 }

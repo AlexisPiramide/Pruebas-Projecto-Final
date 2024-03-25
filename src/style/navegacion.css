@@ -1,0 +1,82 @@
+:root{
+    --primario: #dddddd;
+    --secundario: #bbbbbb;
+    --letras:#767676;
+    --resalte: #424242;
+}
+#root{
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    width: 100%;
+}
+/**Framgento aside**/
+aside{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-width: 190px;
+    max-width: 190px;
+    width: 14%;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/**Fragmento Navegacion**/
+.navegacion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.enlace{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--primario);
+    color: var(--letras);
+    border: 1px solid var(--secundario);
+    padding: 10px 10px 10px 20px;
+    gap: 10px;
+    border-radius: 40px;
+}
+
+.enlace > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    padding: 0px;
+}
+
+aside > div:last-child > .enlace{
+    color: var(--primario);
+    background-color: var(--resalte);
+}
+
+/**Fragmento Usuario**/
+.usuario-sesion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+main{
+    width: 100%;
+
+}

@@ -8,16 +8,16 @@ export default function Ofertas({ etiquetasSeleccionadas, opcionesBusqueda}) {
     const [ofertas, setOfertas] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/ofertas')
+        /*fetch('http://localhost:3000/ofertas')
             .then(response => response.json())
-            .then(data => setOfertas(data))
+            .then(data => setOfertas(data))*/
     }, [])
     
 
     useEffect(() => {
-        fetch('http://localhost:3000/ofertas')
+        /*fetch('http://localhost:3000/ofertas')
             .then(response => response.json())
-            .then(data => setOfertas(data))
+            .then(data => setOfertas(data))*/
     }, [etiquetasSeleccionadas, opcionesBusqueda])
 
     //Ver oferta tendria que ser otra pagina con solo la informacion de esa oferta  
