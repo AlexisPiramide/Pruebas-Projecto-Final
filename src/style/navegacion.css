@@ -83,3 +83,13 @@ aside > div:last-child > .enlace{
 main{
     width: 100%;
 }
+
+
+.logo{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-bottom: 1px solid black;
+}

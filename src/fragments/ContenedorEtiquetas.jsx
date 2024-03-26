@@ -6,14 +6,11 @@ export default function ContenedorEtiquetas({etiquetas,etiquetasSeleccionadas,se
     const selecionarEtiqueta = (e) => {
         e.preventDefault();
         const id = e.target.id;
-        console.log(e.target)
-        console.log(id)
 
         if (etiquetasSeleccionadas.includes(id)) {
-            console.log(0)
+            
             setEtiquetasSeleccionadas(etiquetasSeleccionadas.filter(etiqueta => etiqueta !== id));
         }else{
-            console.log(1)
             setEtiquetasSeleccionadas([...etiquetasSeleccionadas, id]);
         }
         animacionEtiquetaCss(e.target);

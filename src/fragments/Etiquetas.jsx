@@ -8,7 +8,9 @@ export default function Etiquetas({ etiquetas, etiquetasSeleccionadas, setEtique
     const [escodidas,setEscondidas] = useState(false);
 
     useEffect(() => {
+        if(etiquetasSeleccionadas.length > 1){  
         console.log(etiquetasSeleccionadas)
+        }
     },[etiquetasSeleccionadas])
 
     return (
