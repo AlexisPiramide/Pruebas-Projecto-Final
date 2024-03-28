@@ -2,7 +2,7 @@ import "../style/ContenedorEtiquetas.css";
 
 export default function ContenedorEtiquetas({etiquetas,etiquetasSeleccionadas,setEtiquetasSeleccionadas}) {
 
-
+    
     const selecionarEtiqueta = (e) => {
         e.preventDefault();
         const id = e.target.id;
