@@ -1,13 +1,15 @@
 import  {React, useState } from 'react';
-import '../style/LogIn.css';
+import '../style/Registro.css';
 import emailImage from '../img/email.svg';
 import passwordImage from '../img/password.svg';
+import usuarioImage from '../img/user.svg';
 export default function LogIn() {
 
 
     const [correo, setCorreo] = useState('');
     const [password, setPassword] = useState('');
     const [repetirPassword, setRepetirPassword] = useState('');
+    const [usuario, setUsuario] = useState('');
 
     const registrar = (e) => {
         e.preventDefault();
@@ -15,6 +17,7 @@ export default function LogIn() {
         console.log(correo)
         console.log(password)
         console.log(repetirPassword)
+        console.log(usuario)
     }
 
 
@@ -22,6 +25,11 @@ export default function LogIn() {
     return (
         <main>
             <form>
+            <label htmlFor="usuario">Usuario</label>
+                <div className='campo-formulario'>
+                    <img src={usuarioImage} alt="lock" />
+                    <input type="usuario" id="usuario" name="usuario" onChange={(e)=> setUsuario(e.target.value)} required />
+                </div>
                 <label htmlFor="email">Email</label>
                 <div className='campo-formulario'>
                     <img src={emailImage} alt="lock" />
