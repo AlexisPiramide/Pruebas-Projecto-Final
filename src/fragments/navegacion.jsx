@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import '../style/Navegacion.css'
+import { Link } from 'react-router-dom'
 
 import favorito from '../img/favorito.svg'
 import home from '../img/home.svg'
@@ -24,8 +25,8 @@ export default function Navegacion({sesion}) {
             </div>
 
             <div className="usuario-sesion">
-                {sesion?<button className="enlace" href="#">Acceder Sesion</button>:<button className="enlace" href="#"><img src={puerta} alt="Pagina Icon"/>Acceder Sesion</button>}
+                {sesion?<button className="enlace" href="#"><Link to="/login">Acceder Sesion</Link></button>:<button className="enlace" href="#"><img src={puerta} alt="Pagina Icon"/><Link to="/registro">Acceder Sesion</Link></button>}
             </div>
         </aside>
     )
-}
+}  

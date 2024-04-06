@@ -1,18 +1,12 @@
-import { useState } from 'react'
+import { Outlet } from "react-router-dom";
 
-import Navegacion from './fragments/Navegacion'
-import PanelOfertas from './fragments/PanelOfertas'
-import LogIn from './fragments/LogIn'
-import Registro from './fragments/Registro'
+import Navegacion from "./fragments/Navegacion";
 
-function App() {
-  const [sesion, setSesion] = useState(false);
+export default function App() {
   return (
     <>
-      <Navegacion sesion={sesion}/>
-      <Registro />
+      <Navegacion />
+      <Outlet />
     </>
-  )
+  );
 }
-
-export default App
